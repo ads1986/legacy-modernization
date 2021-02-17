@@ -65,23 +65,21 @@ realizadas:
 <img src="https://github.com/ads1986/legacy-modernization/blob/main/artifacts/diagrama-arquitetura.jpeg"/>
 </p>
 
-## 3. Modelagem da base de dados
-
-## 4. Diagrama de implantação da solução
+## 3. Diagrama de implantação da solução
 
 <p align="center" >
 <img src="https://github.com/ads1986/legacy-modernization/blob/main/artifacts/diagrama-implantacao.jpeg"/>
 </p>
 
-## 5. Implementação do Projeto
+## 4. Implementação do Projeto
 
-### 5.1 Pré-Requisitos
+### 4.1 Pré-Requisitos
 
 - Ter instalado o Java 11+
 - Ter instalado o [Docker](https://docs.docker.com/get-docker/)
 - Ter instalado o [Maven](https://maven.apache.org/) [3.6.2+](https://maven.apache.org/download.cgi)
 
-### 5.2 Execução do Ambiente do Kafka Streams
+### 4.2 Execução do Ambiente do Kafka Streams
 
 Após a instalação do [Docker](https://docs.docker.com/get-docker/), acessar o diretório raiz deste repositorio (../legacy-modernization/) e executar o comando abaixo para que seja provisionado 
 um cluster de desenvolvimento do Kafka Streams por meio do [Docker Componse](https://docs.docker.com/compose/).
@@ -97,8 +95,8 @@ $ Starting docker_zookeeper_1 ... done
 $ Creating docker_kafka_1     ... done
 ```
 
-### 5.3 Criação de tópicos do Kafka
+### 4.3 Executar Projetos
 
-## 6. Referências utilizadas
+## 5. Referências utilizadas
 
-## 7. Demais itens que você julgar relevante (Framework ou técnicas de teste, metodologias, padrões, etc.)
+## 6. Demais itens que você julgar relevante (Framework ou técnicas de teste, metodologias, padrões, etc.)
