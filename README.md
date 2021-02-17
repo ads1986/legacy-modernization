@@ -127,3 +127,55 @@ curl --location --request POST 'http://localhost:8080/slips' \
 "barCode": "66190500954014481606906809350314337370000000100"
 }'
 ```
+
+## 5. Referências utilizadas
+
+Segue abaixo a lista de referencias utilizadas :
+
+[QUARKUS - USING APACHE KAFKA WITH REACTIVE MESSAGING](https://quarkus.io/guides/kafka)
+[Kafka - Quickstart](https://kafka.apache.org/quickstart)
+[Debezium - Connector DB2](https://debezium.io/documentation/reference/connectors/db2.html)
+
+## 6. Demais itens que você julgar relevante (Framework ou técnicas de teste, metodologias, padrões, etc.)
+
+Segue abaixo as principais tecnologias sugeridas na solucao proposta, assim como no projeto desenvolvido:
+
+Linguagem de Programação
+  Java
+
+Frameworks
+  Quarkus (Aplicações Cloud Native / Menor consumo de Memoria)
+
+Container
+  Docker
+
+Orquestração de Container
+  Kubernetes (Amazon EKS)
+
+Ferramentas de CI/CD
+  AWS CodeCommit
+  AWS CodeBuild
+  AWS CodeDeploy
+  AWS SNS
+
+Provedor Cloud
+  AWS
+
+Event Stream
+  Kafka Stream (Amazon MSK)
+
+Banco de Dados
+  Debezium (CDC)
+  IBM DB2
+  Amazon RDS (Oracle)
+
+## 7. Atividades nao realizadas
+
+Infelizmente algumas atividades que julgo de extrema importância, nao foram realizadas devido à falta de tempo 
+por conta da criticidade dos projetos que estou atuando no momento, são elas:
+
+- Criacao da Modelagem da base de dados
+- Implementação de Testes Unitários 
+- Implementação de Testes Integrados
+- Implementação de Padrões de Código que utilizo nos meus projetos atualmente
+- Melhor elaboração da funcionalidade escolhida, e revisão adequada dos código produzidos
