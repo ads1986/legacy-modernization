@@ -141,33 +141,33 @@ Segue abaixo a lista de referencias utilizadas :
 Segue abaixo as principais tecnologias sugeridas na solucao proposta, assim como no projeto desenvolvido:
 
 Linguagem de Programação
-  Java
+- Java
 
 Frameworks
-  Quarkus (Aplicações Cloud Native / Menor consumo de Memoria)
+- Quarkus (Aplicações Cloud Native / Menor consumo de Memoria)
 
 Container
-  Docker
+- Docker
 
 Orquestração de Container
-  Kubernetes (Amazon EKS)
+- Kubernetes (Amazon EKS)
 
 Ferramentas de CI/CD
-  AWS CodeCommit
-  AWS CodeBuild
-  AWS CodeDeploy
-  AWS SNS
+- AWS CodeCommit
+- AWS CodeBuild
+- AWS CodeDeploy
+- AWS SNS
 
 Provedor Cloud
-  AWS
+- AWS
 
 Event Stream
-  Kafka Stream (Amazon MSK)
+- Kafka Stream (Amazon MSK)
 
 Banco de Dados
-  Debezium (CDC)
-  IBM DB2
-  Amazon RDS (Oracle)
+- Debezium (CDC)
+- IBM DB2
+- Amazon RDS (Oracle)
 
 ## 7. Atividades nao realizadas
 
