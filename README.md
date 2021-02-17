@@ -127,7 +127,6 @@ curl --location --request POST 'http://localhost:8080/slips' \
 "barCode": "66190500954014481606906809350314337370000000100"
 }'
 ```
-
 ## 5. Referências utilizadas
 
 Segue abaixo a lista de referencias utilizadas :
@@ -135,6 +134,8 @@ Segue abaixo a lista de referencias utilizadas :
 [QUARKUS - USING APACHE KAFKA WITH REACTIVE MESSAGING](https://quarkus.io/guides/kafka)
 [Kafka - Quickstart](https://kafka.apache.org/quickstart)
 [Debezium - Connector DB2](https://debezium.io/documentation/reference/connectors/db2.html)
+[Amazon EKS](https://aws.amazon.com/pt/eks)
+[Amazon MKS](https://aws.amazon.com/pt/msk/)
 
 ## 6. Demais itens que você julgar relevante (Framework ou técnicas de teste, metodologias, padrões, etc.)
 
