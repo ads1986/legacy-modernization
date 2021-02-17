@@ -83,15 +83,21 @@ realizadas:
 
 ### 5.2 Execução do Ambiente do Kafka Streams
 
-Após a instalação do [Docker](https://docs.docker.com/get-docker/), executar o comando abaixo para que seja provisionado 
-para que um ambiente contendo o ecosistema do Kafka Streams localmente, por meio do [Docker Componse](https://docs.docker.com/compose/).
+Após a instalação do [Docker](https://docs.docker.com/get-docker/), acessar o diretório raiz deste repositorio (../legacy-modernization/) e executar o comando abaixo para que seja provisionado 
+um cluster de desenvolvimento do Kafka Streams por meio do [Docker Componse](https://docs.docker.com/compose/).
 
 ```sh
 $ docker/docker-compose up -d
-Example
 ```
 
+Após a execução do comando acima, as seguintes mensagens serão apresentadas :
 
+```sh
+$ Starting docker_zookeeper_1 ... done
+$ Creating docker_kafka_1     ... done
+```
+
+### 5.3 Criação de tópicos do Kafka
 
 ## 6. Referências utilizadas
 
