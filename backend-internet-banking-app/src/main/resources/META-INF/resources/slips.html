@@ -14,13 +14,13 @@
 
     <h2>Last price</h2>
     <div class="row">
-        <p class="col-md-12">The last price is <strong><span id="content">N/A</span>&nbsp;&euro;</strong>.</p>
+        <p class="col-md-12">Stauts do Boletos <strong><span id="content"></span></strong>.</p>
     </div>
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
-    var source = new EventSource("/prices/stream");
+    var source = new EventSource("/slips/stream");
     source.onmessage = function (event) {
         document.getElementById("content").innerHTML = event.data;
     };

@@ -1,5 +1,5 @@
 package br.com.banking.domain.slip.model;
 
-public enum SlipEnum {
+public enum SlipStatusEnum {
     WAITING, PROCESSING, DONE
 }

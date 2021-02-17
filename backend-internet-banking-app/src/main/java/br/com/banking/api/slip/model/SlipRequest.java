@@ -1,7 +1,7 @@
 package br.com.banking.api.slip.model;
 
 import br.com.banking.domain.slip.model.Slip;
-import br.com.banking.domain.slip.model.SlipEnum;
+import br.com.banking.domain.slip.model.SlipStatusEnum;
 import lombok.Getter;
 
 import java.time.LocalDate;
@@ -19,7 +19,7 @@ public class SlipRequest {
                 .documentValue(getDocumentValue())
                 .dueDate(getDueDate())
                 .paymentValue(getPaymentValue())
-                .status(SlipEnum.WAITING)
+                .status(SlipStatusEnum.WAITING)
                 .build();
     }
 }
