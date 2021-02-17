@@ -71,15 +71,33 @@ realizadas:
 <img src="https://github.com/ads1986/legacy-modernization/blob/main/artifacts/diagrama-implantacao.jpeg"/>
 </p>
 
-## 4. Implementação do Projeto
+## 4. Projeto Exemplo
 
-### 4.1 Pré-Requisitos
+### 4.1 Detalhes do Projeto
+
+Foram dsenvolvidas 2 aplicações com responsabilidades diferentes.
+
+#### 4.1.1 Aplicação [backend-internet-banking-app](https://github.com/ads1986/legacy-modernization/tree/main/backend-internet-banking-app)
+
+Apesar de ser uma aplicação simples, a ideia com este projeto é demonstrar o Pattern BFF (Backend For Front-End) que tem como objetivo fazer com que o backend 
+trabalhe para devolver as informações que permitam ao Front-End entregar a melhor experiencia ao usuário. Uma aplicação Web por exemplo, do ponto de vista funcional, 
+necessita receber o extrato bancário numa paginação simples, enquanto que no Mobile, esta paginação tem que facilitar a implementação num modelo de scroll infinito.
+
+#### 4.1.2 Aplicação [payment-processor-app](https://github.com/ads1986/legacy-modernization/tree/main/payment-processor-app)
+
+Esta aplicação tem um objetivo diferente, seguindo um padrão de arquitetura orientada a eventos, observa um topico (slip-to-pay) do Kafka Streams e quando
+um evento é lançado, obtem este vento, realiza o processamento e posta o resultado em outro tópico (slip-processed). Este topico por sua vez, permitira que quem o observar
+receba os eventos postados.
+
+### 4.2 Execução dos Projetos
+
+#### 4.2.1 Pré-Requisitos
 
 - Ter instalado o Java 11+
 - Ter instalado o [Docker](https://docs.docker.com/get-docker/)
 - Ter instalado o [Maven](https://maven.apache.org/) [3.6.2+](https://maven.apache.org/download.cgi)
 
-### 4.2 Execução do Ambiente do Kafka Streams
+#### 4.2.2 Execução do Ambiente do Kafka Streams
 
 Após a instalação do [Docker](https://docs.docker.com/get-docker/), acessar o diretório raiz deste repositorio (../legacy-modernization/) e executar o comando abaixo para que seja provisionado 
 um cluster de desenvolvimento do Kafka Streams por meio do [Docker Componse](https://docs.docker.com/compose/).
@@ -95,7 +113,28 @@ $ Starting docker_zookeeper_1 ... done
 $ Creating docker_kafka_1     ... done
 ```
 
-### 4.3 Executar Projetos
+#### 4.2.3 Executar Projetos
+
+Para que os projetos sejam inicializados, basta executar os seguintes comandos:
+
+```sh
+$ backend-internet-banking-app/./mvnw quarkus:dev
+$ payment-processor-app/./mvnw quarkus:dev
+```
+
+Apos a inicializacao, basta acessar ao endereco [http://localhost:8080/slips.html](http://localhost:8080/slips.html), e executar 
+o seguinte comando no terminal :
+
+```sh
+curl --location --request POST 'http://localhost:8080/slips' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"documentValue": 10,
+"paymentValue": 10,
+"dueDate": "2020-01-20",
+"barCode": "66190500954014481606906809350314337370000000100"
+}'
+```
 
 ## 5. Referências utilizadas
 
